@@ -1,0 +1,278 @@
+body {
+	background: #f8f8f8;
+}
+.box {
+	width: 10rem;
+}
+.header {
+	//
+	z-index: 999;
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 90/75rem;
+	border: 1px solid #e6e5e6;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.nav_left {
+		width: 206/75rem;
+		height: 48/75rem;
+		img {
+			height: 100%;
+			margin-left: 32/75rem;
+		}
+	}
+	// 头部 右边的功能槽
+	.nav_right {
+		height: 100%;
+		width: 264/75rem;
+		display: flex;
+		.sex {
+			background: url('http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/boy.3e68949a.png') no-repeat;
+			background-size: 100% 100%;
+		}
+		.search {
+			background: url('http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/search.15e76af5.png') no-repeat;
+			background-size: 100% 100%;
+		}
+		.mine {
+			background: url('http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/mine.01301e95.png') no-repeat;
+			background-size: 100% 100%;
+		}
+		& > div {
+			flex: 1;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+.section {
+	position: relative;
+	top: 90/75rem;
+	width: 100%;
+	.swipeContainer {
+		background: white;
+		padding-top: 16/75rem;
+		margin: 0 auto;
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		.swiper-container {
+			border-radius: 16/75rem;
+			height: 428/75rem;
+			width: 686/75rem;
+			overflow: hidden;
+			.swiper-wrapper {
+				.swiper-slide {
+					width: 100%;
+					height: 100%;
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+		.swiper-pagination {
+			.swiper-pagination-bullet {
+				margin: 0 6px;
+				opacity: 1;
+				background: white;
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+}
+.swiper-pagination-bullet-active {
+	background: #f75d79 !important;
+}
+.home_menu {
+	background: white;
+	width: 100%;
+	height: 240/75rem;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	.home_menu_item {
+		flex: 1;
+		img {
+			width: 120/75rem;
+		}
+		p {
+			font-size: 28/75rem;
+			line-height: 48/75rem;
+		}
+	}
+}
+// 所有推荐模块的样式----头部
+.recommend {
+	background: white;
+	width: 100%;
+	margin-top: 16/75rem;
+	.recommend_header {
+		height: 88/75rem;
+		line-height: 88/75rem;
+		width: 686/75rem;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.header_title {
+			position: relative;
+			font-size: 36/75rem;
+			color: #666;
+			text-indent: 51/75rem;
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				content: '';
+				width: 44/75rem;
+				height: 44/75rem;
+				background: url(../images/default_avatar.png) no-repeat;
+				background-size: cover;
+			}
+		}
+		.header_more {
+			text-align: center;
+			width: 84/75rem;
+			height: 40/75rem;
+			line-height: 40/75rem;
+			font-size: 24/75rem;
+			background: #4a90e2;
+			color: white;
+			border-radius: 20/75rem;
+		}
+	}
+}
+// 每个模块固定大小
+.recommend_container {
+	width: 686/75rem;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+// 推荐模块里项的 固定大小  统一-----
+.recommend > div.recommend_container > div.item {
+	overflow: hidden;
+	.img {
+		width: 335/75rem;
+		height: 180/75rem;
+		border-radius: 20/75rem;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info {
+		div {
+			line-height: 49/75rem;
+			width: 100%;
+		}
+		line-height: 36/75rem;
+		height: 98/75rem;
+		.title {
+			height: 38/75rem;
+			font-size: 28/75rem;
+			color: #666;
+		}
+		.desc {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			height: 50/75rem;
+			font-size: 24/75rem;
+			color: #999;
+		}
+	}
+}
+// 第三个 与第七个样式相同
+section > div:nth-child(3) > div.recommend_container > div:nth-child(1),
+section > div:nth-child(7) > div.recommend_container > div:nth-child(1) {
+	width: 100%;
+	.img {
+		width: 686/75rem;
+		height: 430/75rem;
+		border-radius: 20/75rem;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+// 最后的一个div 为3个项 重新定义大小
+body > div > section > div:nth-child(8) > div.recommend_container > div.item {
+	width: 218/75rem;
+	.img {
+		width: 218/75rem;
+		height: 300/75rem;
+		border-radius: 20/75rem;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info {
+		text-align: center;
+	}
+}
+
+section > div:nth-child(5) {
+	.threeColumn {
+		width: 686/75rem;
+		margin: 0 auto;
+		.comic {
+			padding-bottom: 32/75rem;
+			.container {
+				display: flex;
+				.cover {
+					margin-right:8/75rem; 
+					height: 180/75rem;
+					width: 320/75rem;
+					overflow: hidden;
+					border-radius:15/75rem;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.info{
+					width:326/75rem;
+					.title{
+						height: 64/75rem;
+						line-height: 64/75rem;
+						font-size: 32/75rem;
+						color: #333;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					.author{
+						
+						padding-bottom:16/75rem; 
+						height: 32/75rem;
+						font-size: 24/75rem;
+						img{
+							float: left;
+							width: 32/75rem;
+							height: 32/75rem;;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}

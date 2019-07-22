@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 0.42666667rem;
+}
+.header {
+  position: relative;
+  margin: 0 auto;
+  width: 8.86666667rem;
+  height: auto;
+  text-align: center;
+  top: 0.37333333rem;
+  font-size: 0.49333333rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header span {
+  color: #fff;
+  position: relative;
+  left: 0.53333333rem;
+}
+.header .icon {
+  position: relative;
+  top: 0.10666667rem;
+  left: 0.09333333rem;
+  width: 0.46666667rem;
+  height: 0.53333333rem;
+  background: url("../images/sprites.png");
+  background-size: 10rem auto;
+  background-position: -1.26666667rem -0.42666667rem;
+}
+.header .login {
+  position: relative;
+  top: 0.10666667rem;
+  color: #fff;
+  font-size: 0.37333333rem;
+  text-decoration: none;
+}
+.bg {
+  width: 100%;
+  height: 13.76rem;
+  background: url("../images/1.jpg");
+  background-size: 100% 18.66666667rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+}
+.mynv {
+  width: 4.8rem;
+  height: 3.33333333rem;
+  margin: 1.73333333rem auto;
+}
+.mynv .nv {
+  width: 4.8rem;
+  height: 5.02666667rem;
+  background: url("../images/2.jpg");
+  background-repeat: no-repeat;
+  background-size: 4.8rem 5.02666667rem;
+  position: absolute;
+}
+.section {
+  position: relative;
+  width: 8.33333333rem;
+  height: 8.8rem;
+  border: 1px solid #FFF;
+  box-shadow: 2px 10px 20px #ccc;
+  background: #FFF;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+}
+.section form {
+  text-align: center;
+  margin-top: 0.96rem;
+}
+.section form input {
+  width: 6.6rem;
+  height: 1.33333333rem;
+  margin-bottom: 0.48rem;
+  border: 2px solid #eee;
+  border-radius: 0.2rem;
+  font-size: 0.37333333rem;
+  color: #cacbca;
+  text-indent: 1em;
+}
+.section form input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.section form .mypass {
+  display: inline-block;
+  width: 6.6rem;
+  height: 1.33333333rem;
+  margin-bottom: 0.48rem;
+  border: 2px solid #eee;
+  border-radius: 0.2rem;
+  font-size: 0.37333333rem;
+  color: #cacbca;
+  text-align: center;
+}
+.section form .mypass .input {
+  width: 4.64rem;
+  border: none;
+}
+.section form .mypass .pass {
+  position: relative;
+  right: 0.13333333rem;
+  color: #878687;
+}
+.section form .mypass a {
+  text-decoration: none;
+}
+.section form button {
+  width: 6.16rem;
+  height: 1.33333333rem;
+  margin-bottom: 0.48rem;
+  border: none;
+  border-radius: 0.2rem;
+  background: #cecfce;
+  font-size: 0.4rem;
+  color: #fff;
+}
+.section .kong {
+  width: 100%;
+  height: 4rem;
+}

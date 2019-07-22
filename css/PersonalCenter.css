@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#box {
+  width: 10rem;
+}
+#box .com_mian .com_nav {
+  position: absolute;
+  width: 10rem;
+  height: 1.17333333rem;
+}
+#box .com_mian .com_nav .nav_left {
+  width: 1.17333333rem;
+  height: 1.17333333rem;
+  background-size: 100% 100%;
+  background-image: url(http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/back_white.4b142d5e.png);
+}
+#box .com_mian .banner {
+  width: 100%;
+  height: 5.97333333rem;
+  background-image: url(http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/cover_bg.abfb0eee.png);
+  background-size: 100% 100%;
+}
+#box .com_mian .banner .acativ {
+  width: 2.34666667rem;
+  height: 2.34666667rem;
+  background: black;
+  position: relative;
+  border-radius: 50%;
+  top: 1.73333333rem;
+  left: 3.73333333rem;
+  background-image: url(http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/avatar.78577bb7.png);
+  background-size: 100% 100%;
+}
+#box .com_mian .banner .mine-nickname {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.42666667rem;
+  margin-top: 1.86666667rem;
+}
+#box .com_mian .banner .mine-vcoin {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  font-size: 0.37333333rem;
+  margin-top: 0.17333333rem;
+}
+#box .com_mian .banner:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.53333333rem;
+  background-image: url(http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/cover_bottom.50206627.png);
+  background-size: 10rem 0.53333333rem;
+}
+#box .com_mian .mine-list {
+  width: 10rem;
+}
+#box .com_mian .mine-list .mine-item {
+  position: relative;
+  width: 10rem;
+  height: 1.44rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding-left: 0.33333333rem;
+}
+#box .com_mian .mine-list .mine-item img {
+  background-size: 0.85333333rem 0.85333333rem;
+  width: 0.85333333rem;
+  height: 0.85333333rem;
+  margin-top: 0.26666667rem;
+}
+#box .com_mian .mine-list .mine-item span {
+  color: #666;
+  font-size: 0.37333333rem;
+}
+#box .com_mian .mine-list .mine-item .m-item-title {
+  line-height: 1.44rem;
+  display: block;
+  width: 7.33333333rem;
+  height: 1.44rem;
+  text-indent: 0.13333333rem;
+}
+#box .com_mian .mine-list .mine-item .m-item-nav {
+  height: 1.44rem;
+  width: 1.17333333rem;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAYAAABRRIOnAAAAAXNSR0IArs4c6QAAAvBJREFUeAHt3EFu2kAYgNFQifYkSHCU7NIb5BjdVV31Gr1Bs8tRQOIkDQs6v2IiM8mMHSmRYOZ1A2OIhZ8/jSa1yc2NfwQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIEPgAgcUH7OMid3E8Hr/udrtf6fE+PuBisfizXq9/pseni/zAF/Khmg1iu93+TjH8yJwfl8vl99Vq9S/bbjgIfGlV4jQzZMd3ezgc/u73+2/ZdsNBoNkgKmdYFBWcZoOINUPluEVRwGl2DRGLyrSOeEjHfVs49thsTZHhtDxDPMUCMk56dszjoZlirJGeNztDnI4zFpCxkExjM8UJpfLYfBBx7KKoFJC91EUQosjOemXYTRCiqFQweqmrIEQxOvOFp90FIYpCCcPmLoMQRTmKboMQxdtRdB2EKF5H0X0QojiPQhCDh/+8eoZo9lrGeffTo7hpZu61j7hwNr3H63yHIEbnbW4UcWve6MeaeiqI7HTOiaJwN1a2p+scCuI6z9unfWpBZLRzFpcTd2Nle7yuod8yRudrTgzp7Y+bzeau1dv5zRBDEHNjiN9EWo0hKMwQCeE9MbT+nY7ugxDDMEUOD10HIYbzGGLUbRBieB1Dt0GI4e0YugxCDOUYugtCDPUYugpCDNMxdBOEGObF0EUQYpgfQ/NBiOF9McS7m72WEXc1+ZKvIF4EhruafOP7RWTek5ZniPsKgT8UUsBpNojC8cZmMVRwmg2icFeTGCoxxEvNXtyKRaU/XDpx9r1MgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgACBzxL4D6+HWOsjVYVmAAAAAElFTkSuQmCC);
+  background-size: 100% 100%;
+}
+#box .com_mian .signout {
+  margin: 0.90666667rem 0;
+}
+#box .com_mian .signout .button_header {
+  width: 6.16rem;
+  height: 1.26666667rem;
+  margin: 0 auto;
+}
+#box .com_mian .signout .button_header .comic_button {
+  width: 6.16rem;
+  height: 1.26666667rem;
+  color: white;
+  background: #f75d79;
+  border: none;
+  font-size: 0.37333333rem;
+  border-radius: 0.13333333rem;
+}

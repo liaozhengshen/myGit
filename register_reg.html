@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+      <title></title>
+    <script src="lib/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/register.css"/>
+	<script src="lib/vue.js"></script>
+</head>
+<body>
+	<div class="bg"></div>
+	 
+<header class="header">
+		 <a href="login.html" class="icon"></a>
+		 <span>注册</span>
+		 <a href="login.html" class="login">我要登录</a>
+ </header>
+ <div class="mynv"><div class="nv"></div></div>
+  
+<section class="section">
+    <form action="#">
+             <input type="password" placeholder="请输入手机号">
+		    <input type="password" placeholder="请输入验证码(8～16位数字or英文) ">
+            <span class="mypass">
+			 <input type="password" class="input" placeholder="请输入验证码"><a href="#" class="pass">获取验证码</a>
+			</span>
+         <button @click="register">注册</button>
+    </form>
+ <div class="kong"></div>
+</section>
+</body>
+<script type="text/javascript">
+	var vm=new Vue({
+			el:".section",
+			methods:{
+				register(){
+					location.href="register.html"
+				}
+			}
+		})
+</script>
+</html>

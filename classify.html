@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="lib/flexible.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/classify.css"/>
+		<script src="lib/vue.js"></script>
+		<script src="lib/axios.min.js"></script>
+		
+		
+	</head>
+	<body>
+		
+		<div id="box">
+			<!-- 头部固定 -->
+			<header class="header">
+				<div class="nav">
+					<a href="weibo.html" class="nav_back_icon"></a>
+					<div class="nav_back_middle">分类</div>
+					<div class="nav_back_rigth"></div>
+				</div>
+				<div class="classify">
+					<div class="filter_item" @click="item_index=index" v-for="(value,index) in classify" :class="{filterst:index==item_index}">{{
+						value.title
+					}}</div>
+				</div>
+			</header>
+			<section class="section">
+				<div class="loadMoreWraper">
+					<div class="item" v-for="(value,index) in classify_arr">
+						<div class="img">
+							<img :src="value.img">
+						</div>
+						<div class="info">
+							<div class="title">
+								{{value.title}}
+							</div>
+							<div class="desc">
+								{{value.desc}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+	</body>
+	<script src="js/classify.js"></script>
+	<script src="js/classify_arr.js"></script>
+</html>

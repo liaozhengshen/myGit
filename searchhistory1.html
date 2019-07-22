@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible.js"></script>
+    <link rel="stylesheet" href="css/searchhistory.css">
+    <script src="lib/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--头部搜索开始-->
+	<div id="header">
+		<form action="" class="search-wrap">
+			<div class="search-box">
+				<input type="search" placeholder="请输入搜索关键字"/>
+			</div>
+                </form>
+                <div class="search-cancel">
+                    <span @click="back">取消</span>
+                </div>
+	</div>
+	
+	<!--内容区域开始-->
+
+
+   
+
+     <div class="search-title">
+        热门搜索
+    </div>
+
+  
+    <div class="search-hot">
+        <ul>
+            <li><a href="#">
+                    我拿到的恋爱剧本不对劲！？
+            </a></li>
+            <li><a href="#">
+                    悬疑猫——大叔深夜故事集
+            </a></li>
+            <li><a href="#">
+                    黑粉的造星计划
+            </a></li>
+            <li><a href="#">
+                    救命！游戏男友成精了
+            </a></li>
+            <li><a href="#">
+                    男友来自异次元
+            </a></li>
+            <li><a href="#">
+                    我的灵界女友们
+            </a></li>
+            <li><a href="#">
+                    伞少女梦谈
+            </a></li>
+            <li><a href="#">
+                    魔王奶爸修炼中
+            </a></li>
+            <li><a href="#">
+                    无常备忘录
+            </a></li>
+            <li><a href="#">
+                    拜托了！学霸
+            </a></li>
+            <li><a href="#">
+                    拎猫入住
+            </a></li>
+            <li><a href="#">
+                    我的女友是直男
+            </a></li>
+        </ul>
+    </div>
+ 
+    <div class="search-history">
+        搜索历史
+    </div>
+
+    <div class="search-history-my">
+      <ul>
+          <li><a href="#">我的</a></li>
+      </ul>
+    </div>  
+
+</body>
+<script type="text/javascript">
+	var vm=new Vue({
+			el:"#header",
+			methods:{
+				back(){
+					location.href="weibo.html"
+				}
+			}
+		})
+</script>
+</html>

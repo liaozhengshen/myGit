@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/vue-router.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/ranking.css" />
+	</head>
+	<body>
+		<div id="box">
+			<header><span @click="back()"></span>
+				<h3>排行榜</h3>
+			</header>
+			<nav>
+				<router-link :class="{'active':isclick1}" @click="isclick1=true" to="/read/1">阅读榜</router-link>
+				<router-link :class="{'active':isclick2}" @click="iscrick2=true" to="/newwork/2">新作榜</router-link>
+				<router-link :class="{'active':isclick3}" @click="iscrick3=true" to="/synthesis/3">综合榜</router-link>
+			</nav>
+			<section>
+				<router-view></router-view>
+			</section>
+		</div>
+		<template id="element">
+			<ul>
+				<li v-for="(item,index) in which">
+					<img :src="item.imgsrc">
+					<div class="p">
+						<h3>{{item.title}}</h3>
+						<p><img src="img/index.png">{{item.type}}</p>
+						<p><img src="img/ink.png">{{company(item)}}</p>
+					</div>
+					<div class="rank">
+						<span v-show="index>=3?true:false">{{index+1}}</span>
+						<img v-show="index==0?true:false" src="img/first.png">
+						<img v-show="index==1?true:false" src="img/second.png">
+						<img v-show="index==2?true:false" src="img/third.png">
+					</div>
+				</li>
+			</ul>
+		</template>
+		<script type="text/javascript">
+			var element = Vue.extend({
+				template: '#element',
+				computed: {
+					which() {
+						let arr = []
+						if (this.$route.params.id == 1) {
+							arr = this.lists1
+						}
+						if (this.$route.params.id == 2) {
+							arr = this.lists2
+						}
+						if (this.$route.params.id == 3) {
+							arr = this.lists3
+						}
+						return arr;
+					},
+					company() {
+						return function(item) {
+							for(let i=0;i<this.companies.length;i++){
+								if(item.where==this.companies[i].lowname) {
+									item.where=this.companies[i].longname
+								}
+							}
+							return item.where
+						}
+					}
+				},
+				data() {
+					return {
+						companies: [{
+								lowname: "hzkg",
+								longname: "杭州奎古文化创意有限公司"
+							},
+							{
+								lowname: "un",
+								longname: "UN社"
+							},
+							{
+								lowname: "ssm",
+								longname: "上上漫"
+							},
+							{
+								lowname: "ysss",
+								longname: "余生守时"
+							},
+							{
+								lowname: "fq",
+								longname: "蜂群SWARM工作室"
+							},
+							{
+								lowname: "qm",
+								longname: "奇喵屋工作室"
+							},
+							{
+								lowname: "gxs",
+								longname: "怪小兽漫画"
+							},
+							{
+								lowname: "cqy",
+								longname: "重庆缘漫动漫"
+							},
+							{
+								lowname: "xbxy",
+								longname: "小布小禹"
+							},
+							{
+								lowname: "myy",
+								longname: "漫悠悠漫画"
+							},
+							{
+								lowname: "ccm",
+								longname: "长春漫城动漫"
+							},
+							{
+								lowname: "my",
+								longname: "木偶漫画三老爷"
+							},
+							{
+								lowname: "ys",
+								longname: "月蚀动漫"
+							},
+							{
+								lowname: "sx",
+								longname: "碎晓晓晓"
+							},
+							{
+								lowname: "cf",
+								longname: "春风画社"
+							},
+						],
+						lists1: [{
+								imgsrc: 'img/1-1.png',
+								title: '水晶鞋',
+								type:"校园/悬疑/剧情",
+								where: 'hzkg'
+							},
+							{
+								imgsrc: 'img/1-2.jpg',
+								title: '废材小姐的恋爱生存游戏',
+								type:"恋爱/奇幻/校园",
+								where: 'un'
+							},
+							{
+								imgsrc: 'img/1-3.jpg',
+								title: '人鱼公主',
+								type:"恋爱/都市/悬疑",
+								where: 'ssm'
+							},
+							{
+								imgsrc: 'img/1-4.png',
+								title: '我的未婚夫候选人',
+								type:"恋爱/都市/悬疑",
+								where: 'ysss'
+							},
+							{
+								imgsrc: 'img/1-5.jpg',
+								title: '天才宝贝的腹黑嫡娘',
+								type:"恋爱/校园/剧情",
+								where: 'fq'
+							},
+							{
+								imgsrc: 'img/1-6.png',
+								title: '爱我的都去死',
+								type:"恋爱/校园/奇幻",
+								where: 'qm'
+							},
+							{
+								imgsrc: 'img/1-7.jpg',
+								title: '我的奇怪少爷',
+								type:"恋爱/剧情/校园",
+								where: 'gxs'
+							},
+							{
+								imgsrc: 'img/1-8.png',
+								title: '被天敌饲养的日子',
+								type:"恋爱/古风/剧情",
+								where: 'cqy'
+							},
+							{
+								imgsrc: 'img/1-9.jpg',
+								title: '娇妻出厂不合格',
+								type:"恋爱/总裁/剧情",
+								where: 'xbxy'
+							},
+							{
+								imgsrc: 'img/1-10.jpg',
+								title: '傲娇王爷种田妃',
+								type:"恋爱/古风/搞笑",
+								where: 'myy'
+							},
+						],
+						lists2: [{
+								imgsrc: 'img/2-1.jpg',
+								title: '我的未婚夫候选人',
+								type:"恋爱/校园/剧情",
+								where: 'ysss'
+							},
+							{
+								imgsrc: 'img/2-2.jpg',
+								title: '傲娇王爷种田妃',
+								type:"恋爱/古风/搞笑",
+								where: 'myy'
+							},
+							{
+								imgsrc: 'img/2-3.jpg',
+								title: '被天敌饲养的日子',
+								type:"恋爱/古风/剧情",
+								where: 'cqy'
+							},
+							{
+								imgsrc: 'img/2-4.png',
+								title: '娇妻出厂不合格',
+								type:"恋爱/总裁/都市",
+								where: 'xbxy'
+							},
+							{
+								imgsrc: 'img/2-5.jpg',
+								title: '我是小三劝退师',
+								type:"恋爱/都市/剧情",
+								where: 'ccm'
+							},
+							{
+								imgsrc: 'img/2-6.png',
+								title: '三老爷诡事会',
+								type:"奇幻/灵异/日常",
+								where: 'my'
+							},
+							{
+								imgsrc: 'img/2-7.jpg',
+								title: '师父求饶吧',
+								type:"搞笑/古风/恋爱",
+								where: 'myy'
+							},
+							{
+								imgsrc: 'img/2-8.jpg',
+								title: '男神你马甲掉了',
+								type:"恋爱",
+								where: 'ysss'
+							},
+							{
+								imgsrc: 'img/2-9.png',
+								title: '半路千金',
+								type:"恋爱/剧情/校园",
+								where: 'ys'
+							},
+							{
+								imgsrc: 'img/2-10.jpg',
+								title: '恋念化妆师',
+								type:"恋爱/都市",
+								where: 'sx'
+							},
+						],
+						lists3: [{
+								imgsrc: 'img/3-1.png',
+								title: '人鱼公主',
+								type:"恋爱/都市/悬疑",
+								where: 'hzkg'
+							},
+							{
+								imgsrc: 'img/3-2.jpg',
+								title: '我的未婚夫候选人',
+								type:"恋爱/校园/剧情",
+								where: 'ssm'
+							},
+							{
+								imgsrc: 'img/3-3.jpg',
+								title: '爱我的都去死',
+								type:"恋爱/校园/奇幻",
+								where: 'ysss'
+							},
+							{
+								imgsrc: 'img/3-4.jpg',
+								title: '傲娇王爷种田妃',
+								type:"恋爱/古风/搞笑",
+								where: 'qm'
+							},
+							{
+								imgsrc: 'img/3-5.jpg',
+								title: '废材小姐的恋爱生存游戏',
+								type:"恋爱/奇幻/校园",
+								where: 'myy'
+							},
+							{
+								imgsrc: 'img/3-6.jpg',
+								title: '被天敌饲养的日子',
+								type:"恋爱/古风/剧情",
+								where: 'un'
+							},
+							{
+								imgsrc: 'img/3-7.jpg',
+								title: '娇妻出厂不合格',
+								type:"恋爱/总裁/都市",
+								where: 'ccy'
+							},
+							{
+								imgsrc: 'img/3-8.png',
+								title: '被天敌饲养的日子',
+								type:"恋爱/都市/剧情",
+								where: 'xbxy'
+							},
+							{
+								imgsrc: 'img/3-9.jpg',
+								title: '我是小三劝退师',
+								type:"恋爱/都市/剧情",
+								where: 'ccm'
+							},
+							{
+								imgsrc: 'img/3-10.jpg',
+								title: '美人老矣',
+								type:"恋爱/古风/剧情",
+								where: 'cf'
+							},
+						]
+					}
+				}
+			})
+			var routes = [{
+					path: '/read/:id',
+					component: element
+				},
+				{
+					path: '/newwork/:id',
+					component: element
+				},
+				{
+					path: '/synthesis/:id',
+					component: element
+				}
+			]
+			var router = new VueRouter({
+				routes
+			})
+			new Vue({
+				el: '#box',
+				data:{
+					isclick1:true,
+					isclick2:false,
+					isclick3:false,
+				},
+				methods:{
+					back(){
+						location.href="weibo.html"
+					}
+				},
+				router: router
+			})
+			router.push("/read/1")
+		</script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+#box {
+  width: 10rem;
+}
+.header {
+  width: 100%;
+}
+.header .nav {
+  height: 1.17333333rem;
+  display: flex;
+}
+.nav_back_middle {
+  width: 7.65333333rem;
+  height: 100%;
+  line-height: 1.17333333rem;
+  text-align: center;
+  font-size: 0.48rem;
+}
+.nav_back_icon,
+.nav_back_rigth {
+  height: 100%;
+  width: 1.17333333rem;
+}
+.nav_back_icon {
+  background: url("../images/icon_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.header .classify {
+  width: 9.6rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header .classify .filter_item {
+  width: 1.6rem;
+  height: 0.73333333rem;
+  font-size: 0.37333333rem;
+  color: #ccc;
+  text-align: center;
+  line-height: 0.73333333rem;
+  border-radius: 0.09333333rem;
+}
+.filterst {
+  background: #f75d79;
+  color: white!important;
+}
+.section {
+  width: 100%;
+}
+.section .loadMoreWraper {
+  width: 9.57333333rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section .loadMoreWraper .item {
+  width: 4.68rem;
+  height: 4.10666667rem;
+}
+.section .loadMoreWraper .item .img {
+  width: 100%;
+  height: 2.8rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.section .loadMoreWraper .item .img img {
+  width: 100%;
+  height: 100%;
+}
+.section .loadMoreWraper .item .info {
+  width: 100%;
+  height: 1.30666667rem;
+}
+.section .loadMoreWraper .item .info .title {
+  margin-top: 0.13333333rem;
+  font-size: 0.37333333rem;
+  color: #666;
+  height: 0.50666667rem;
+}
+.section .loadMoreWraper .item .info .desc {
+  font-size: 0.32rem;
+  color: #999;
+  height: 0.42666667rem;
+}

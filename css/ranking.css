@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "微软雅黑";
+  font-weight: normal;
+}
+#box {
+  width: 100%;
+}
+header {
+  height: 40px;
+  position: relative;
+  width: 100%;
+}
+header span {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-left: 2px solid #666666;
+  border-top: 2px solid #666666;
+  position: absolute;
+  transform: rotate(-45deg) translateY(-50%);
+  left: 25px;
+  top: 50%;
+}
+header h3 {
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  color: #333;
+}
+nav {
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+}
+nav a {
+  line-height: 40px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+nav .active {
+  border-bottom: 2px solid #f75d79;
+  color: #666;
+}
+section ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+section ul li {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+section ul li > img {
+  width: 144px;
+  height: 81px;
+  border-radius: 5px;
+}
+section ul li .p {
+  width: 41%;
+  margin-left: 5px;
+}
+section ul li .p img {
+  width: 15px;
+  vertical-align: middle;
+}
+section ul li .p h3 {
+  font-size: 16px;
+  line-height: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+section ul li .p p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+section ul li .p p:last-of-type {
+  margin-bottom: 0px;
+}
+section ul li .rank {
+  width: 10%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #666;
+}
+section ul li .rank img {
+  width: 40px;
+  height: 45px;
+}

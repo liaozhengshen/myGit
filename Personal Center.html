@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="lib/flexible.js"></script>
+	<link rel="stylesheet" href="css/PersonalCenter.css">
+	<script src="lib/vue.js"></script>
+	<title>个人中心</title>
+</head>
+
+<body>
+	<!-- Personal Center  个人中心 -->
+
+	<div id="box">
+		<div class="com_mian">
+			<div class="com_nav">
+				<div class="nav_left" @click="back">
+
+				</div>
+			</div>
+			<div class="banner">
+				<div class="acativ" @click="send">
+				</div>
+				<p class="mine-nickname">戳我立即登录哦QAQ</p>
+				<p class="mine-vcoin">我的墨币: 0</p>
+			</div>
+			<div class="mine-list">
+				<div class="mine-item">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAq1BMVEUAAACZmZmfn5+ZmZmampqioqKcnJyZmZmampqZmZmampqampqampqZmZmampqZmZmampqioqKampqampqZmZmampqampqbm5uZmZmbm5uampqampr///+ZmZnMzMzb29vf39/KysqgoKCcnJz8/PywsLDs7OzQ0NC8vLy1tbWoqKjGxsazs7Pv7+/V1dX19fXCwsKioqLo6Oi+vr65ubn39/fh4eHx8fHi4uItiChUAAAAHHRSTlMAgBn5Ywsg2WqUe04x776JcAjmxKqkm1lLPLWxvtaxEAAAAjxJREFUaN7t19tyqjAYhuEUsVr3Veum5RVRURS12trN/V/ZkhmcRWXj/MXpeJDnIMNRPgn5klFpmqZpmqb9mXuzcpegYt6rayg+kOqheIX5S2Qo5U94AJbOKIGzDN4h9/oDtpXCBvJ+BxOWVqolmDkDKuCnB/hQufU3uPwNbn0XXezB7Tc5+yzSou6H1b7ZqlRaZr86vOriPNbKvUapwA+FUqNXrj3mn3zQ7BRIVeg0BzlCDPMlMvnePXg733H8nXdw95GQF9NQv1HtEFp5i+/NzPphtvleeCtCnap8bbrh5M7nh5Xq49MJQ7rSlXoGpuvtl3XR13Y9BZ6VSBnwwp9+2asHlEUBbfAtgR20lcAQ9jNJwGwCQ9kKeZaIJ1ujFuxkATtoCQL64EZuRjsYx+PY83E8WUNf0mGYvkZuXjtpXARj6HUqvJ0b4FihEYwSxs00EuBAQ3ZOwGR2HjCZRwNccKObSHhalGB7FhAk/A9YwHRzCthCSYmrvIoFMDmcngML62QlLPJRsQ7jWABEno9rGBpDvaiEmrA+CzhMIPEN1tCU3zYFmJ/tovmEpG8wh4KhxJ7g/XybBgnxXfQOT0quFpTtUg9OJaupkLRsF5r8GSvZr8pm2yknkh0vmbxsmeIlk5ctW7xk8rJlipdMXrZs8ZLJy5YpXjJ52TLESyYvG29WhjdiJZPpwj4j4W0PXZWHUQdcf5TId4G6oXKptcnUrqmcjF7WH5CeofIzBq27RK2BoTRN0zRN0/7IP1Wf11KaXo8YAAAAAElFTkSuQmCC"
+						alt="">
+					<span class="m-item-title">墨币充值</span>
+					<span class="m-item-nav"></span>
+				</div>
+			</div>
+
+			<div class="mine-list">
+				<div class="mine-item">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAxlBMVEUAAACZmZmamprAwMCampqampqampqampqampqZmZmampqampqdnZ2enp6ZmZmampqbm5ubm5uZmZmampqampqampqbm5ubm5ubm5ugoKCampqcnJyjo6OqqqqZmZmampqZmZmcnJyampr///+ZmZnz8/OcnJz39/erq6ujo6PX19fT09PLy8vq6uqlpaX29vbm5ubj4+O+vr60tLSoqKigoKD5+fn7+/vHx8fFxcXDw8O6urqzs7Ovr6/u7u7b29vZ2dnPz88dCgzZAAAAI3RSTlMA+0gD+KSaU/TYzbAkHuVzQDjsknlrYlpOFL8zDgnexbcqlAYekaAAAAJzSURBVGje7ddpctpAEIbhEZvBbMEGsxkv6VdiBwNmx9v9L5WxTGGoshIrIyV/9Bygv5qqnp4eFYlEIpFIJPIftCrJZKWlQpO/QcvkVEji57jO4yocV+D0+w5cqVDEM/Am8gaZcI5wBvOFyGIOZyoM5zAQbQDnKgQxcNqitR2IqeA1YC2uNTRU4Erg2OKyHSipoGVhKntTyKqA3QPPsvcM3KtgJWErB1tIqkDlLRjKwRCsvArMdbN6BzM5MoO7avPaeDjkYsVUo4DrQY5McBUaqWIs93eDI1fOZiw+PcmJJz5ZmWwx73tyJjhwOtvBqy0n7NfBtuMchVR9XiuLd6PZpj+xxZM96W9mI1wlv9eq8zJcyrcshy9Pfq9eAYbigw03yo8MTMSHB78BKejaPg7QhZTyo34BI9tP/Qufjfoj/f0EewTpH0oZJIRQXyck4PEbCfYjJHR9/2LvCWP5g/F7ff1EGySEVV+rWdBpy2+0O2DVDHatzwTv+noLM00Irb5WtWAqHqbumDZ0CSvxsILLINaJnnjoQTKIlffBe4aar8HxBCzEwwIScWUmB13x1IWcMlODmXiaQU2ZKcNaPK2hHEYTebeReRONxwG3URracrAcOM5gKQdtSBtu1SdN1OuidXsnbZQ3/fntZG/SYa8zkb2d6X+wCBtxDXdohaurAtpuKK4NFJWJFPRFs6do6XJLqVY5jTa1RevDzwAC2isHsC7rylW/tABntRDpmc7TCsx7gzlaNnc0QLJo80F/DhVlol7gw21JnSjd8uHC8B/VvEDLnH3xmmbc+k3jH2AxlarFv5zkZ6lkpa4ikUgkEolE/olfOX7VdZNusD8AAAAASUVORK5CYII="
+						alt="">
+					<span class="m-item-title">我的关注</span>
+					<span class="m-item-nav"></span>
+				</div>
+			</div>
+
+			<div class="mine-list">
+				<div class="mine-item">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAb1BMVEUAAACZmZmsrKyZmZmZmZmampqZmZmampqbm5uampqbm5ucnJyampqampqZmZmampqbm5ubm5v///+ZmZnMzMzb29vIyMirq6vDw8Obm5v4+Pjx8fH9/f29vb3z8/O1tbWvr6+lpaXf39/R0dGdnZ0z8l+BAAAAEnRSTlMAgAjzw6xzaFlMPTXPi5R8YyFZQJSJAAAB30lEQVRo3uzTyY6DMBBF0SYJhJC5LraZIcP/f2MLhFBAnYUJvYjkswTpPUyVfxzHcRzHWdb1cvZ658t18fjViZHTauH8AxOH1VLRURh4Xptf67in67bB84Iw+rRm56/pKXmh6K393Qfx+w2DWkZqBpv93PwtLVNqbUDLiAajdWlobeflH4FU55Il6d8nSJNMcp0Cx7nf31Qi+e39DG65SNXMO8MeKAuRrM03ZrpF/bNbJlKUgP0cNtAUIpLAU0lhmDCFqCckIlI0sLHeT0grEclSUG1IwkjSlitIMxGpUrDdVr/fmzsY6eQqHqhcOgbu/U75lvd3DV3IAxJ5K4FHVw5ruzsdgZFWDLG8Nbw1EFkVhFDaFJQQWhUEoG0KNARWBR7ENgUxeK7g3wtU/EItX6AYUd9XMPlF3zhkV/DbjhmjAAgDQbCxs5MU1vr/PwrhmOaigQ0YCDsP8EAUZnb+Af9o01/RAl+RD6x2APHquynipagjdp3BrlFHSX7pgwx9gPwK+k7htKBw0HclQKLRzpI4o9EIEC2hojIzVCYJJUbgUTs5E518EIFqxtYT110S91UfT8aqId6DENenhC+YEsbGkPICY8jInNNn28cHqTYMUuOTWpOY1IwxxhhjfuEBfGy3xe1x36QAAAAASUVORK5CYII="
+						alt="">
+					<span class="m-item-title">浏览历史</span>
+					<span class="m-item-nav"></span>
+				</div>
+			</div>
+
+			<div class="mine-list">
+				<div class="mine-item">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAZlBMVEUAAACZmZmZmZmZmZmampqZmZmbm5uZmZmZmZmdnZ2enp7///+ZmZnNzc2enp7CwsL5+fn29vbb29usrKylpaXy8vLl5eXe3t63t7egoKDs7OzX19fHx8e/v7+xsbGrq6vn5+e4uLjc1+EFAAAAC3RSTlMAgPrhmHNSDxQqFWkHK6MAAAE9SURBVGje7dfZasMwEIVh70k6x5LlJXH25P1fsi4tHjBtI8miCDrfnSHk12KDlAghhBBCCBG7TVWm1spqk7jZFhmcZMU2cbDL4SzfOYw/B9Dp2pruPgr2cygA1ZKTVgGF9f5mQEuOWiCz3ekK6MhZB1SWgRLQ5EwDpWUgBWqa1Eo39FKj1eevgdQxoIB+Ty/se0B5BmpMLs2vw79g4jsDOhwB3E/0o9MdwPFAvgEy4zzApXmKoyHvwOSsANwG+sZwA6DORKsC/DdsmfYPLBeC8eKtD/BWMt7+9QF+Ga/N/HzlF3htgD8n/ur4IVCAB60NkdE8nVABXnb0PXhDwgbIPPHlaShkgD1GBajxQRQ6wIaBWMgAk4AE/kfA/+AVy9HR//Aby/E9efO8gMRzhfK7BMZ1jRVCCCGEEOLPvQOPbmLBbAoRSQAAAABJRU5ErkJggg=="
+						alt="">
+					<span class="m-item-title">意见反馈</span>
+					<span class="m-item-nav"></span>
+				</div>
+			</div>
+
+			<div class="mine-list">
+				<div class="mine-item">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAQlBMVEUAAACZmZmampqbm5ubm5ukpKT///+ZmZnMzMy9vb38/Pzf39+rq6vv7++enp7T09P19fXY2Ninp6ekpKSampru7u4FSgE5AAAABnRSTlMAgKRmLg69rKroAAABBElEQVRo3u2Y0QqCQBBFU2uvq5al9v+/GjiEwpKsWze07nmYh14OnNCROQghhBDibY5FFkFxPKRxyhFJfkoS5IgmT+oDDL6MwA9ASqUC8C4KDxQJggwo4wQlkP21AItIYAL3Agm+L6hrmyxBDdxskgQ3oK9scgRVD7Q2OQLXAp1NkqDq0NgkCdy1vdrc63MgwQ8vnAX28FWxfwFm3J1riH/y+ENJFTTOnXnfRdUFOI+NatKrwj8bed7St0YX1k6eGhEEQSOCIGj0OUHYiCAIGhEE80YEQdCIIJg1IgiCRpylb42IO9kaEQXWSEt/vWCLB6l1J7UtHgVXnTW3eZgVQgghxMQDgTdCUXNnEAEAAAAASUVORK5CYII="
+						alt="">
+					<span class="m-item-title">已购物品</span>
+					<span class="m-item-nav"></span>
+				</div>
+			</div>
+			<div class="mine-list">
+				<div class="mine-item">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAQlBMVEUAAACZmZmampqbm5ubm5ukpKT///+ZmZnMzMy9vb38/Pzf39+rq6vv7++enp7T09P19fXY2Ninp6ekpKSampru7u4FSgE5AAAABnRSTlMAgKRmLg69rKroAAABBElEQVRo3u2Y0QqCQBBFU2uvq5al9v+/GjiEwpKsWze07nmYh14OnNCROQghhBDibY5FFkFxPKRxyhFJfkoS5IgmT+oDDL6MwA9ASqUC8C4KDxQJggwo4wQlkP21AItIYAL3Agm+L6hrmyxBDdxskgQ3oK9scgRVD7Q2OQLXAp1NkqDq0NgkCdy1vdrc63MgwQ8vnAX28FWxfwFm3J1riH/y+ENJFTTOnXnfRdUFOI+NatKrwj8bed7St0YX1k6eGhEEQSOCIGj0OUHYiCAIGhEE80YEQdCIIJg1IgiCRpylb42IO9kaEQXWSEt/vWCLB6l1J7UtHgVXnTW3eZgVQgghxMQDgTdCUXNnEAEAAAAASUVORK5CYII="
+						alt="">
+					<span class="m-item-title">已购物品</span>
+					<span class="m-item-nav"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var vm=new Vue({
+		el:"#box",
+		methods:{
+			back(){
+				location.href="weibo.html"
+			},
+			send(){
+				location.href="login.html"
+			}
+		}
+	})
+</script>
+</html>
